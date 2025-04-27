@@ -72,7 +72,7 @@ class MockPaymentService: PaymentServiceProtocol {
     
     func pay(paymentId: String, completion: @escaping (Result<Void, Error>) -> Void) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            completion(.success(())) // Мокаем успешную оплату
+            completion(.success(()))
         }
     }
 }
